@@ -62,16 +62,31 @@ This is where the awemaria plugin helps, once setup you can setup different shar
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+## MariaDB: The open source relational database 
+
+MariaDB was designed as a drop-in replacement of MySQL(R) with more
+features, new storage engines, fewer bugs, and better performance.
+
+MariaDB is brought to you by the MariaDB Foundation and the MariaDB Corporation.
+Please read the CREDITS file for details about the MariaDB Foundation,
+and who is developing MariaDB.
+
+MariaDB is developed by many of the original developers of MySQL who
+now work for the MariaDB Corporation, the MariaDB Foundation and by
+many people in the community.
+
+MySQL, which is the base of MariaDB, is a product and trademark of Oracle
+Corporation, Inc. For a list of developers and other contributors,
+see the Credits appendix.  You can also run 'SHOW authors' to get a
+list of active contributors.
+
+A description of the MariaDB project and a manual can be found at:
+
+https://mariadb.org
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 
@@ -83,7 +98,6 @@ Here's why:
 
 
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -92,14 +106,12 @@ _For more examples, please refer to the [Documentation](https://awemaria.docs.cl
 
 
 
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/clovrlabs/awemaria-plugin/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -112,14 +124,22 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the GPL License. See `LICENSE` for more information.
 
 
+NOTE: 
 
-<!-- CONTACT -->
+MariaDB is specifically available only under version 2 of the GNU
+General Public License (GPLv2). (I.e. Without the "any later version"
+clause.) This is inherited from MySQL. Please see the README file in
+the MySQL distribution for more information.
+
+License information can be found in the COPYING file. Third party
+license information can be found in the THIRDPARTY file.
+
+
 ## Contact
 
 Your Name - [@clovrlabs](https://twitter.com/clovrlabs) - info@clovrlabs.com
@@ -128,14 +148,11 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [mariadb](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Choose an Open Source License](https://choosealicense.com)
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/clovrlabs/awemaria-plugin.svg?style=flat-square
 [contributors-url]: https://github.com/clovrlabs/awemaria-plugin/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/clovrlabs/awemaria-plugin.svg?style=flat-square
@@ -149,3 +166,5 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/clovrlabs
 [product-screenshot]: images/screenshot.png
+
+

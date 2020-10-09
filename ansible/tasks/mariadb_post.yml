@@ -1,0 +1,38 @@
+---
+- name: Copy .my.cnf to root user
+  template:
+    src: my.cnf.j2
+    dest: "{{ mariadb_root_mycnf_filepath }}"
+    owner: root
+    group: root
+    mode: 0400
+
+- name: Configure my.cnf
+  ini_file:
+    path: "{{ mariadb_mycnf_path }}"
+    section: "{{ item.0 }}"
+    option: "{{ item.1 }}"
+    value: "{{ item.2 }}"
+  with_inidata: "{{ mariadb_mycnf }}"
+  notify: Restart MariaDB Service
+  tags:
+    - mariadb-config
+
+- name: Create databases
+  mysql_db:
+    name: "{{ item }}"
+  with_items: "{{ mariadb_databases }}"
+  when: mariadb_databases is defined
+
+- name: Create users
+  mysql_user:
+    login_user: "root"
+    login_password: "{{ mariadb_root_password }}"
+    login_host: "127.0.0.1"
+    name: "{{ item.username }}"
+    password: "{{ item.password }}"
+    host: "{{ item.host }}"
+    state: "present"
+    priv: "{{ item.priv }}"
+  with_items: "{{ mariadb_users }}"
+  when: mariadb_users is defined

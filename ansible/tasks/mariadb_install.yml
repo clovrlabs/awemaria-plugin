@@ -1,0 +1,6 @@
+---
+- name: Install MariaDB and Percona ExtraBackup
+  apt:
+     pkg: "mariadb-server"
+     state: latest
+     update_cache: yes

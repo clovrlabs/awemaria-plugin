@@ -1,0 +1,9 @@
+---
+- include: mariadb_pre.yml
+
+- include: mariadb_install.yml
+
+- include: mariadb_post.yml
+
+- include: mariadb_build_slave.yml
+  when: mariadb_build_slave

@@ -66,11 +66,11 @@ To unlock the secret via Shamir's secret sharing, you need a minimum number of s
 
 Some of the useful properties of Awemaria Shamir's scheme are:
 
-    Secure: Information theoretic security.
-    Minimal: The size of each piece does not exceed the size of the original data.
-    Extensible: When k {\displaystyle k\,\!} k\,\! is kept fixed, D i {\displaystyle D_{i}\,\!} D_i\,\! pieces can be dynamically added or deleted without affecting the other pieces.
-    Dynamic: Security can be easily enhanced without changing the secret, but by changing the polynomial occasionally (keeping the same free term) and constructing new shares to the participants.
-    Flexible: In organizations where hierarchy is important, we can supply each participant different number of pieces according to their importance inside the organization. For instance, the president can unlock the safe alone, whereas 3 secretaries are required together to unlock it.
+ * Secure: Information theoretic security.
+ * Minimal: The size of each piece does not exceed the size of the original data.
+ * Extensible: When k {\displaystyle k\,\!} k\,\! is kept fixed, D i {\displaystyle D_{i}\,\!} D_i\,\! pieces can be dynamically added or deleted without affecting the other pieces.
+ * Dynamic: Security can be easily enhanced without changing the secret, but by changing the polynomial occasionally (keeping the same free term) and constructing new shares to the participants.
+ * Flexible: In organizations where hierarchy is important, we can supply each participant different number of pieces according to their importance inside the organization. For instance, the president can unlock the safe alone, whereas 3 secretaries are required together to unlock it.
 
 
 ## MariaDB: The open source relational database 

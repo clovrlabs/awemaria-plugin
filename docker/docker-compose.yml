@@ -1,0 +1,36 @@
+version: '3'
+services:
+  awemariadb_master:
+    build: .
+    image: mariadb
+    env_file:
+      - ./conf/master/mysql_master.env
+    container_name: "db_master"
+    restart: "no"
+    ports:
+      - 4406:3306
+    volumes:
+      - ./master/conf/mysql.conf.cnf:/etc/mysql/conf.d/mysql.conf.cnf
+      - ./master/data:/var/lib/mysql
+    networks:
+      - overlay
+
+  awemariadb_slave:
+    build: .
+    image: mariadb
+    env_file:
+      - ./conf/slave/mysql_slave.env
+    container_name: "db_slave"
+    restart: "no"
+    ports:
+      - 5506:3306
+    depends_on:
+      - awemariadb_master
+    volumes:
+      - ./slave/conf/mysql.conf.cnf:/etc/mysql/conf.d/mysql.conf.cnf
+      - ./slave/data:/var/lib/mysql
+    networks:
+      - overlay
+
+networks:
+  overlay:

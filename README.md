@@ -13,7 +13,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">awemaria-plugin</h3>
+  <h3 align="center">Awemaria Plugin</h3>
 MariaDB's data-at-rest encryption requires the use of a key management and encryption plugin. 
 These plugins are responsible both for the management of encryption keys and for the actual encryption and decryption of data. 
 
@@ -22,8 +22,10 @@ However this plugin come with some limitations.
 You are bound to trust your operators when it comes to encryption, and often in regulated environment
 where separation of privileges is paramount that's not always possible.
 
-This is where the awemaria plugin helps, once setup you can setup different shards to unlock your database without giving away the master encryption key.
+With Awemaria the shamir's secret sharing is used, therefore securing a secret in a distributed way. 
+The secret is split into multiple parts, called shares. These shares are used to reconstruct the original secret.
 
+To unlock the secret via Shamir's secret sharing, you need a minimum number of shares. This is called the threshold, and is used to denote the minimum number of shares needed to unlock the secret. Let us walk through an example:
 
   <p align="center">
     <br />
@@ -60,7 +62,15 @@ This is where the awemaria plugin helps, once setup you can setup different shar
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![awemaria logo][product-screenshot]](https://awemaria.clovrlabs.com)
+
+Some of the useful properties of Awemaria Shamir's scheme are:
+
+ * Secure: Information theoretic security.
+ * Minimal: The size of each piece does not exceed the size of the original data.
+ * Extensible: When k {\displaystyle k\,\!} k\,\! is kept fixed, D i {\displaystyle D_{i}\,\!} D_i\,\! pieces can be dynamically added or deleted without affecting the other pieces.
+ * Dynamic: Security can be easily enhanced without changing the secret, but by changing the polynomial occasionally (keeping the same free term) and constructing new shares to the participants.
+ * Flexible: In organizations where hierarchy is important, we can supply each participant different number of pieces according to their importance inside the organization. For instance, the president can unlock the safe alone, whereas 3 secretaries are required together to unlock it.
 
 
 ## MariaDB: The open source relational database 

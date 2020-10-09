@@ -17,7 +17,8 @@ RUN apt update && apt install -y build-essential \
 
 RUN mkdir -p /builds/clovrlabs/awemaria
 
-COPY . /builds/clovrlabs/awemaria/
+COPY ../mariadb/ /builds/clovrlabs/awemaria/
+COPY ../plugin /build/clovrlabs/awemaria/plugin
 
 RUN gcc -v \
   && mkdir -p /builds/clovrlabs/awemaria/build
